@@ -11,7 +11,9 @@ class AgendaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       theme: ThemeData(
+        
         buttonTheme: ButtonThemeData(buttonColor: Color(0xff0c3549),textTheme: ButtonTextTheme.primary),
         primaryColor: Color(0xffe9e9e9),
         accentColor: Color(0xff0c3549),

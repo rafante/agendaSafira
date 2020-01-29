@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text('SafiraLab'),
         backgroundColor: Color(0xe9e9e9),
       ),
@@ -22,14 +23,24 @@ class Home extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Material(
-                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                      elevation: 10,
-                      child: Padding(padding: EdgeInsets.all(8.0),
-                      child: Image.asset('images/marca-safiralab.png', width: 100, height: 100,),
-                      )
-                      
-
-                    )
+                        borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                        elevation: 10,
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Image.asset(
+                            'images/marca-safiralab.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                        )),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'SafiraLab',
+                        style:
+                            TextStyle(color: Color(0xff0c3549), fontSize: 20.0),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -54,12 +65,14 @@ class Home extends StatelessWidget {
   }
 }
 
-class CustomListTitle extends StatelessWidget {
-  IconData icone;
-  String texto;
-  Function clicou;
 
-  CustomListTitle(this.icone, this.texto, this.clicou);
+
+class CustomListTitle extends StatelessWidget {
+  final IconData __icone;
+  final String _texto;
+  final Function _clicou;
+
+  CustomListTitle(this.__icone, this._texto, this._clicou);
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +83,7 @@ class CustomListTitle extends StatelessWidget {
             border: Border(bottom: BorderSide(color: Colors.grey.shade400))),
         child: InkWell(
           splashColor: Color(0xff0c3549),
-          onTap: clicou,
+          onTap: _clicou,
           child: Container(
             height: 50,
             child: Row(
@@ -78,12 +91,12 @@ class CustomListTitle extends StatelessWidget {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Icon(icone),
+                    Icon(__icone, color: Color(0xff0c3549), ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        texto,
-                        style: TextStyle(fontSize: 16.0),
+                        _texto,
+                        style: TextStyle(color: Color(0xff0c3549),fontSize: 16.0),
                       ),
                     ),
                   ],
