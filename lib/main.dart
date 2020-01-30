@@ -1,8 +1,11 @@
 //import 'package:agendaSafira/screens/cadastro_paciente.dart';
 //import 'package:agendaSafira/screens/home.dart';
-import 'package:agendaSafira/screens/agendamento.dart';
+//import 'package:agendaSafira/screens/agendamento.dart';
 //rimport 'package:agendaSafira/screens/login_Page.dart';
 //import 'package:agendaSafira/screens/lista_paciente.dart';
+//import 'package:agendaSafira/screens/agendamento.dart';
+//import 'package:agendaSafira/screens/home.dart';
+import 'package:agendaSafira/screens/principal.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -21,7 +24,7 @@ class AgendaApp extends StatelessWidget {
         primaryColor: Color(0xffe9e9e9),
         accentColor: Color(0xff0c3549),
       ),
-      home: Agendamento(),
+      home: PaginaPrincipal(),
 
       // routes: <String, WidgetBuilder>{
       //   '/': (BuildContext context) => new AgendaApp(),

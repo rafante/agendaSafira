@@ -1,5 +1,8 @@
 //import 'package:agendaSafira/models/dados_paciente.dart';
 //import 'package:agendaSafira/screens/cadastro_paciente.dart';
+//import 'package:agendaSafira/main.dart';
+import 'package:agendaSafira/screens/agendamento.dart';
+import 'package:agendaSafira/screens/cadastro_paciente.dart';
 import 'package:agendaSafira/screens/lista_paciente.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +48,12 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            CustomListTitle(Icons.add, 'Cadastro de Paciente', () => {}),
+            CustomListTitle(Icons.add, 'Cadastro de Paciente', () => {
+              Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return CadastroPacientes();
+                      }))
+            }),
             CustomListTitle(
                 Icons.assignment_ind,
                 'Pacientes',
@@ -55,7 +63,12 @@ class Home extends StatelessWidget {
                         return ListaPacientes();
                       }))
                     }),
-            CustomListTitle(Icons.date_range, 'Agendamento', () => {}),
+            CustomListTitle(Icons.date_range, 'Agendamento', () => {
+              Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Agendamento();
+                      }))
+            }),
             CustomListTitle(Icons.settings, 'Relatório Agendamento', () => {}),
             CustomListTitle(Icons.person, 'Usuários', () => {}),
           ],
