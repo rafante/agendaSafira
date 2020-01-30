@@ -33,6 +33,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
       height: Tela.altura(100, context),
       color: Color.fromARGB(255, 233, 233, 233),
       
+
     );
   }
 
